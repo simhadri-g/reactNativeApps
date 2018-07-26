@@ -5,25 +5,39 @@ export default class App extends React.Component {
   state =
   {
     text:"This is our initial text",
-    todo:""
-  }
+    todo:["Learn react","learn react native"]
+    }
   addTodo=()=>{
-    this.setState({todo:this.state.text})
+    var newTodo = this.state.text;
+    var arr = this.state.todo;
+    arr.push(newTodo);
+    this.setState({todo:arr,text:""});
   }
+
+addRenderTodos=()=>{
+  return(
+    this.state.todo.map(t =>{
+      return(
+        <Text key={t}>{t}</Text>
+      )
+    })
+  )
+}
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello world!</Text>
         <Text>Todo list</Text>
         <TextInput
         style = {styles.inputStyle}
         onChangeText = {(text)=>this.setState({text})}
+        value = {this.state.text}
         />
         <Button
         title = "Add todo"
         color = "green"
         onPress = {this.addTodo}/>
-<Text>{this.state.todo}</Text>
+{this.addRenderTodos()}
       </View>
     );
   }
