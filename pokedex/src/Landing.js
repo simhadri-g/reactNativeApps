@@ -15,8 +15,8 @@ class LandingScreen extends React.Component{
                 <Button
                   block={true}
                   style = {styles.buttonStyle}
-                  onPress = {()=>{} }>
-                      <Text style={{color :'#fff'}}>Click here to find pokemon.</Text>
+                  onPress = {()=>{this.props.switchScreen('screen')} }>
+                      <Text style={{color :'#fff'}}>Start Searching</Text>
                 </Button>
             </View>
         </ImageBackground>
