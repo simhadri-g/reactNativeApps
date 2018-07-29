@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View,Platform, ImageBackground ,Image} from 'react-native';
 import LandingScreen from './src/Landing' ;
 import SearchScreen from './src/Search';
+
+
 export default class App extends React.Component {
 
   state = {

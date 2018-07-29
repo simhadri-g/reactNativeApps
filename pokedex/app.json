@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "sdkVersion": "27.0.0",
+    "name": "Pokedex",
+    "icon": "./assets/icons/pokedex1.png",
+    "version": "1.0.0",
+
+    "ios": {
+      "bundleIdentifier": "com.sg.Pokedex"
+    },
+    "android": {
+      "package": "com.sg.Pokedex"
+    }
   }
 }
